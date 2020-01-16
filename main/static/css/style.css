@@ -1,0 +1,63 @@
+.jumbotrone,  .main_image{
+
+    background: url(../images/travelink_logo_short.png) no-repeat 50% 50%;
+    height: 300px;
+}
+
+.container {
+    padding: 3% 0;
+}
+
+.box {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.box h3{
+    visibility: visibile;
+    opacity: 1;
+    transition: opacity .4s, visibility .5s;
+}
+
+.box img{
+    max-width: 100%;
+    }
+
+.description {
+  position: absolute;
+  top: 5%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(29, 106, 154, 0.72);
+  color: #fff;
+  visibility: hidden;
+  opacity: 0;
+
+  /* transition effect. not necessary */
+  transition: opacity .4s, visibility .2s;
+}
+
+.box:hover .description {
+  visibility: visible;
+  opacity: 1;
+}
+
+.box:hover h3{
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .4s, visibility .5s;
+}
+
+.box h3{
+    position: absolute;
+    bottom: 2%;
+    left: 2%;
+}
+
+
+/ * bootstrap changes */
+
+
+

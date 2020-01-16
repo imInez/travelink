@@ -1,0 +1,99 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link href="{% static 'bootstrap/css/bootstrap.css' %}" rel="stylesheet" />
+    <link href="{% static 'css/style.css' %}" rel="stylesheet" />
+
+    <title>TRAVELINK - best places in one place</title>
+  </head>
+  <body>
+
+  <div class="jumbotron main_image"></div>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Sort</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+            <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Price
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Highest to lowest</a>
+          <a class="dropdown-item" href="#">Lowest to highest</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Price range</a>
+        </div>
+      </li>
+
+
+         <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          People
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Single</a>
+          <a class="dropdown-item" href="#">Pair</a>
+          <a class="dropdown-item" href="#">2+2</a>
+        </div>
+      </li>
+
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+
+  <div class="container">
+      <div class="row">
+          {% for travel in travels %}
+                {% if forloop.counter|divisibleby:3 %}
+
+                      <div class="col-md-4">
+                          <div class="box">
+                              <img src="{{ travel.img_link }}" />
+                              <p class="description"> {{ travel.title }} <br> Dodano: {{ travel.added }}<br>
+                                  <a href="{{ travel.address }}"> <button type="button" class="btn btn-light">see offer</button></a></p>
+                              <h3>{{ travel.place }} / {{ travel.price}}/person</h3>
+                          </div>
+                      </div>
+                  </div>
+                <br>
+                <div class="row">
+
+                {% else %}
+                    <div class="col-md-4">
+                          <div class="box">
+                              <img src="{{ travel.img_link }}" />
+                              <p class="description"> {{ travel.title }} <br> Dodano: {{ travel.added }}<br>
+                                  <a href="{{ travel.address }} "> <button type="button" class="btn btn-light">see offer</button></a></p>
+                              <h3>{{ travel.place }} / {{ travel.price}}/person </h3>
+                          </div>
+                      </div>
+
+                {% endif %}
+           {% endfor %}
+
+              </div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="{% static 'bootstrap/js/bootstrap.js' %}"></script>
+
+  </body>
+
+</html>
