@@ -3,15 +3,15 @@ from bs4 import BeautifulSoup
 import re
 import datetime
 
-""" Scraper customized for wakacyjni piraci """
-class Scraper:
 
+class Scraper:
+    """ Scraper customized for wakacyjni piraci """
     def __init__(self):
         self.pages = range(1, 2)
         self.offers = []
 
 
-    def convert_date(date):
+    def convert_date(self, date):
         now = datetime.datetime.now()
         number, time, text = date.split(' ')
         number=int(number)
@@ -53,5 +53,3 @@ class Scraper:
         return self.offers
 
 
-# with open('../data/wp/data_wp.json', 'w') as file:
-#     json.dump(offers, file)

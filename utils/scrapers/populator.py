@@ -1,7 +1,10 @@
 import os
-# os.environ.setdefault("DJANGO_SETTINGS_MODULE", f"{os.path.dirname(os.path.dirname(os.path.abspath(__file__)))+'/travelink1/travelink1.settings'}")
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "/Users/inez/Projects/ONGOING/travelink1/travelink1/travelink1/settings")
-from travelink.main.models import Travel
+import sys
+sys.path.append('/Users/inez/Projects/ONGOING/travelink/travelink2/')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'travelink2.settings')
+import django
+django.setup()
+from main.models import Travel
 
 
 def populate_db(data):
