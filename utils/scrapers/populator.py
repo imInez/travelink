@@ -1,6 +1,6 @@
 import os
 import sys
-sys.path.append('/Users/inez/Projects/ONGOING/travelink/travelink2/')
+sys.path.append('/home/thetravelink/travelink/')
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'travelink2.settings')
 import django
 django.setup()

@@ -25,7 +25,8 @@ SECRET_KEY = 'ts#2bb#1(h((gyje7wn(2su=c0o!h%=3qf6-mvls2$_-645nv*'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'thetravelink.pythonanywhere.com']
 
 
 # Application definition
@@ -77,16 +78,16 @@ WSGI_APPLICATION = 'travelink2.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-        # 'ENGINE': 'django.db.backends.mysql',
-        # 'NAME': 'thetravelink$default',
-        # 'USER': 'thetravelink',
-        # 'PASSWORD': 'lovetravel',
-        # 'HOST': 'thetravelink.mysql.pythonanywhere-services.com',
-        # 'OPTIONS': {
-        #     'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
-        # }
+        # 'ENGINE': 'django.db.backends.sqlite3',
+        # 'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'thetravelink$default',
+        'USER': 'thetravelink',
+        'PASSWORD': 'lovetravel',
+        'HOST': 'thetravelink.mysql.pythonanywhere-services.com',
+        'OPTIONS': {
+            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
+        }
 
     }
 }
