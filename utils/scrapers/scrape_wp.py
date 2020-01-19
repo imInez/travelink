@@ -38,7 +38,6 @@ class Scraper:
                     text = item.find(class_='sc-1wzqm87-1 ffFVpK')
                     site_id = text['data-deal-id']
                     added = text.find(class_='te7pni-0 uLlo').text
-                    location, city, country = '','',''
                     address = text['href']
                     title = text.find(class_='sc-1wzqm87-4 eCZHnk').text
                     price = int(''.join(re.findall(r'\d+',text.find(class_='iuh6hk-1 csqdQc').text)))
@@ -48,8 +47,8 @@ class Scraper:
                 else:
                     # a date needs to be formatted to fit DateTimeField
                     added_date_time = self.convert_date(added)
-                    self.offers.append({'id': site_id, 'added': added_date_time, 'address': address, 'location': location, 'city': city,
-                                   'country': country, 'title': title, 'price': price, 'img': img})
+                    self.offers.append({'id': site_id, 'added': added_date_time, 'address': address, 'place': title,
+                                        'title': title, 'price': price, 'img': img})
         return self.offers
 
 
