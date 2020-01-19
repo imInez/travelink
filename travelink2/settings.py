@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/2.1/ref/settings/
 """
 
 import os
-import secret
+
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 
@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = secret.SECRET_KEY
+SECRET_KEY = '*5wg9irqd4m=0@i(3hr3rkaq000!f=&vwn$mqo=w9fbbhj_@3z'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -89,7 +89,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'thetravelink$default',
         'USER': 'thetravelink',
-        'PASSWORD': secret.DB_PASSWORD,
+        'PASSWORD': 'cwdcsSCE-mukiio-23sc-3cazpqsd',
         'HOST': 'thetravelink.mysql.pythonanywhere-services.com',
         'OPTIONS': {
             'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
