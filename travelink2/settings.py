@@ -31,7 +31,7 @@ DEBUG = True
 ALLOWED_HOSTS = [
     'localhost',
     'thetravelink.pythonanywhere.com',
-    'travelink.herokupp.com'
+    'travelink.herokuapp.com'
 ]
 
 
