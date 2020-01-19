@@ -30,7 +30,9 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     'localhost',
-    'thetravelink.pythonanywhere.com']
+    'thetravelink.pythonanywhere.com',
+    'travelink.herokupp.com'
+]
 
 
 # Application definition
