@@ -10,7 +10,6 @@ See it live: https://travelink.herokuapp.com
 
 
 ## General info
-* I'm still working on this project *
 This project is collecting posts from pages with nice holidays and citybreaks offers
 
 
